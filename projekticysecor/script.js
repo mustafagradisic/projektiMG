@@ -1,24 +1,21 @@
+let nekretnine = {
 
-let novcanice = [1,2,3,4,5,6,7,8,9,10,11,12,13]
-let brojpara= novcanice.length
-let brojac= 0
-
-
-while(brojac< brojpara){
-console.log('-----------')
-console.log('uslov prosao')
-console.log(`novcanica na poziciji [${brojac}]: ${novcanice[brojac]} `  )
-console.log('-----------')
- brojac++
+stan: 7000,
+kuca: 80000,
+plac: 3000
 }
-console.log('-----------')
 
-if (brojac < brojpara){
+let godine = 15
+let mjeseci = godine *12
+let rata = nekretnine.stan / mjeseci
 
+rata = rata.toFixed(2)
 
-    console.log('brojac je manji')
-}else{
-    console.log('brojac nije manji ')
- 
-}
-console.log('brojac '  + brojac)
+console.log(mjeseci)
+
+console.log(rata)
+
+console.log(`mjesecna rata za stan je ${rata} eura.
+mjesecna rata za kucu ${nekretnine.kuca / mjeseci} eura
+mjesecna rata za plac ${nekretnine.plac / mjeseci} eura`)
+
