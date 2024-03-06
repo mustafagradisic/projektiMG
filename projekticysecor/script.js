@@ -1,14 +1,32 @@
+function inflationCalculator()
+{
 
-    let recenica = document.querySelector('#recenica');
- recenica.remove()
+    let inflationRate= document.querySelector('#inflationRate')
+    let money = document.querySelector( '#money' )
+     
+
+inflationRate= parseFloat(inflationRate.value)
+money=parseFloat(money.value)
+
+
+ let years = document.querySelector("#years") 
+ years=parseFloat(years.value)
+
+
+let worth = money + (money*(inflationRate / 100)  )
 
 
 
- let novi_el = document.createElement('div')
- novi_el.classList = ' novi element'   
- novi_el.innerHTML = ' <hr> <br> Pozdrav'
+for(let i=1;i<years;i++)
+{worth+= worth* (inflationRate / 100)
+
+}
+worth= worth.toFixed(2)
 
 
+let newElement = document.createElement('div')
 
-let body = document.querySelector('body')
-body.appendChild(novi_el) 
+newElement.className= 'new-value'
+newElement.innerText = `Danasnjih ${money}e vrijedi isto kao ${worth}e za  ${years} godina.`
+document.querySelector('.container').appendChild(newElement)
+}

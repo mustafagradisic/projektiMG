@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title></title>
+    <title>Kalkulator inflacije</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <span> audi</span>
-    <hr />
-    <span> bmw</span>
-    <hr />
-    <span> mercedes</span>
+    <div class="background-overlay">
+      <h1>Kalkulator inflacije</h1>
 
-    <hr />
+      <div class="container">
+        <h3>
+          Stopa inflacije:
+          <input type="number" min="0.1" id="inflationRate" /> %
+        </h3>
+        <br />
+        <h3>
+          Izračunaj koliko će <input type="number" min="1" id="money" /> € da
+          vrijedi za <input type="number" min="1" id="years" /> godina?
+        </h3>
 
-    <div class="automobil-model">A4</div>
-    <div class="automobil-model">320D</div>
-    <div class="automobil-model">E220</div>
-    <p id="recenica">Mercedes je najbolji</p>
+        <button onclick="inflationCalculator()">Izračunaj</button>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
